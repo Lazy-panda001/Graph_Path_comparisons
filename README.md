@@ -25,35 +25,12 @@ We initialize the solution matrix same as the input graph matrix as a first step
 
 <br><b>TIME COMPLEXITY- O(n3)</b>
 
-## Bidirectional Search Algorithm<br>
-This Search Algorithm is commonly used to find the shortest path in a Graph. In this algorithm we start from both the source and the destination vertex and we end the search when both the set of visited edges intersect. This will give us the shortest path. Suppose if branching factor of tree is b and distance of goal vertex from source is d, then the normal BFS/DFS searching complexity would be O(bd) . On the other hand, if we execute two search operation then the complexity would be O(bd/2) for each search and total complexity would be O(bd/2).
-
-<b>Applications :</b>
-1) Both initial and final goals are unique and completely defined.
-2) The branching factor is exactly the same in both directions.
-
-<b>Complexity : </b> Time and Space Complexity O(bd/2).
-## A* Search Algorithm
-A* Search is a computer algorithm that is widely used in pathfinding and graph traversal. It enjoys widespread use due to its performance and accuracy. Peter Hart, Nils Nilsson and Bertram Raphael of Stanford Research Institute first described the algorithm in 1968. It is an extension of Edsger Dijkstra's 1959 algorithm. A* achieves better performance by using heuristics to guide its search.
-A* selects the path that minimizes : 		 f(n) = g(n) + h(n)
-where n is the last node on the path, g(n) is the cost of the path from the start node to n, and h(n) is a heuristic that estimates the cost of the cheapest path from n to the goal. The heuristic is problem-specific. 
-
-<b>Applications :</b>
-A* is commonly used for the common pathfinding problem in applications such as games. It also helps in general artificial intelligence engines like chess, Sudoku etc. It finds applications to diverse problems, including the problem of parsing using stochastic grammars in NLP.
-
-<b>Complexity :</b>
-The time complexity of A* depends on the heuristic. In the worst case of an unbounded search space, the number of nodes expanded is exponential in the depth of the solution (the shortest path) d: O(bd), where b is the branching factor (the average number of successors per state)
-Worst-case performance : O(|E|) = O(bd)
-Worst-case space complexity : O(|V|) = O(bd)
-
 ## Performance:
 
 Calculated on a Peer to Peer Network graph having 16 vertices and 58 edges. 
 
 1.	Dijkstra’s Algorithm	:   <b>0.024s</b>
 2.	Floyd Warshall      :   	<b>0.026s</b>
-3.	Bidirectional Search :  	<b>0.029s</b>
-4.	A* Search Algorithm	 :      <b>0.033s</b>
 
  
 
